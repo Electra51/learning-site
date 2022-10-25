@@ -1,0 +1,6 @@
+.courses{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 24px;
+    }
+    
