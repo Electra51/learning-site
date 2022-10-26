@@ -9,6 +9,10 @@ import FAQ from "../../Pages/FAQ/FAQ";
 import ErrorPage from "../../Shared/ErrorPage";
 import Blogs from "../../Pages/Blogs/Blogs";
 import Courses from "../../Pages/Courses/Courses";
+// import News from "../../Pages/News/News";
+import Description from "../../Pages/Description/Description";
+import CourseDetails from "../../Pages/CourseDetails/CourseDetails";
+import Category from "../../Pages/Category/Category";
 
 
 
@@ -38,14 +42,18 @@ export const routes = createBrowserRouter([
                 element: <Home></Home>
                
             },
+            {
+                path: '/category/:id',
+                element: <Category></Category>,
+                loader: async ({ params }) => {
+                    return fetch(`http://localhost:5000/category/${params.id}`)
+                    console.log(params.id)
+                }
+               
+            },
             // {
-            //     path: '/Courses',
-            //     element: <Courses></Courses>,
-            //     loader: ({params}) => fetch(`http://localhost:5000/courses/${params.id}`)
-            // },
-            // {
-            //     path: '/category/:id',
-            //     element: <Category></Category>,
+            //     path: '/CourseDetails',
+            //     element: <CourseDetails></CourseDetails>
                
             // },
             {
@@ -57,10 +65,10 @@ export const routes = createBrowserRouter([
                 path: '/Blogs',
                 element:<Blogs></Blogs>
 
-            }
+            },
             // {
-            //     path: '/course/:id',
-            //     element:<Course></Course>
+            //     path: '/courses/:id',
+            //     element:<New></New>
             // }
 
 
