@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" class="light"/>
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -26,7 +26,8 @@
     -->
     <title>SE LEARNING</title>
   </head>
-  <body>
+  <body class="antialiased text-gray-800 bg-white dark:bg-ray-800 dark:text-gray-100">
+    
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -39,5 +40,16 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      const checkbox=document.querySelector("#toggle");
+      const html=document.querySelector("html");
+
+      const toggleDarkMode = function(){
+        checkbox.checked ? html.classList.add("dark") : html.classList.add("light")
+      }
+
+      toggleDarkMode();
+      checkbox.addEventListener("click", toggleDarkMode)
+    </script>
   </body>
 </html>
