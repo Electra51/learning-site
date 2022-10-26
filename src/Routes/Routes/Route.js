@@ -10,9 +10,11 @@ import ErrorPage from "../../Shared/ErrorPage";
 import Blogs from "../../Pages/Blogs/Blogs";
 import Courses from "../../Pages/Courses/Courses";
 // import News from "../../Pages/News/News";
-import Description from "../../Pages/Description/Description";
-import CourseDetails from "../../Pages/CourseDetails/CourseDetails";
+
 import Category from "../../Pages/Category/Category";
+import CheckOut from "../../Pages/CheckOut/CheckOut";
+
+import AllData from "../../Pages/AllData/AllData";
 
 
 
@@ -43,11 +45,21 @@ export const routes = createBrowserRouter([
                
             },
             {
+                path: '/category/:id/checkout',
+                element:<CheckOut></CheckOut>,
+                loader: async ({ params }) => {
+                    return fetch(`http://localhost:5000/category/${params.id}/checkout`)
+                    console.log(params);
+                }
+               
+            },
+            
+            {
                 path: '/category/:id',
                 element: <Category></Category>,
                 loader: async ({ params }) => {
                     return fetch(`http://localhost:5000/category/${params.id}`)
-                    console.log(params.id)
+                    
                 }
                
             },
@@ -64,6 +76,12 @@ export const routes = createBrowserRouter([
             {
                 path: '/Blogs',
                 element:<Blogs></Blogs>
+
+            },
+           
+            {
+                path: '/',
+                element: <AllData></AllData>,
 
             },
             // {

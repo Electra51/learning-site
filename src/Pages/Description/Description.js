@@ -36,7 +36,7 @@ const Description = ({ description }) => {
     
 
     return (
-        <div className='descriptionn'>
+        <div className='descriptionn mt-8'>
             {
                 description.map(description => <CourseDetails
                     key={description.id}
@@ -45,7 +45,7 @@ const Description = ({ description }) => {
                 </CourseDetails>)
             }
 
-            <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white mb-5">Course Description{description.length }</h5>
+            <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white mb-5">Course Description</h5>
             
             
            
