@@ -18,8 +18,8 @@ const Home = () => {
                         <div className="modal">
                             <div className="modal-box relative">
                                 <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                                <h3 className="text-lg font-bold">Congratulations random Internet user!</h3>
-                                <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                                
+                                <p className="py-4">We envision a world where anyone, anywhere has the power to transform their lives through learning. Take the next step in your learning journey by exploring these popular topics.We offer fresh courses on emerging topics that keep your employees ahead of the curve</p>
                             </div>
                         </div>
                     </div>

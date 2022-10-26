@@ -1,13 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layouts/Main";
 
-import Category from "../../Pages/Category/Category";
-import Courses from "../../Pages/Courses/Courses";
-import CourseHome from "../../Pages/CourseHome/CourseHome";
+// import Category from "../../Pages/Category/Category";
+// import Courses from "../../Pages/Courses/Courses";
+// import CourseHome from "../../Pages/CourseHome/CourseHome";
 import Home from "../../Pages/Home/Home";
 import FAQ from "../../Pages/FAQ/FAQ";
 import ErrorPage from "../../Shared/ErrorPage";
 import Blogs from "../../Pages/Blogs/Blogs";
+import Courses from "../../Pages/Courses/Courses";
 
 
 
@@ -17,11 +18,11 @@ export const routes = createBrowserRouter([
         element: <Main></Main>,
         errorElement:<ErrorPage></ErrorPage>,
         children: [
-            {
-                path: '/courses',
-                element: <CourseHome></CourseHome>,
-                loader: () => fetch('http://localhost:5000/courses')
-            },
+            // {
+            //     path: '/courses',
+            //     element: <CourseHome></CourseHome>,
+            //     loader: () => fetch('http://localhost:5000/courses')
+            // },
             {
                 path: '/courses',
                 element: <Courses></Courses>,
@@ -37,16 +38,16 @@ export const routes = createBrowserRouter([
                 element: <Home></Home>
                
             },
-            {
-                path: '/Courses',
-                element: <Courses></Courses>,
-                loader: ({params}) => fetch(`http://localhost:5000/courses/${params.id}`)
-            },
-            {
-                path: '/category/:id',
-                element: <Category></Category>,
+            // {
+            //     path: '/Courses',
+            //     element: <Courses></Courses>,
+            //     loader: ({params}) => fetch(`http://localhost:5000/courses/${params.id}`)
+            // },
+            // {
+            //     path: '/category/:id',
+            //     element: <Category></Category>,
                
-            },
+            // },
             {
                 path: '/FAQ',
                 element:<FAQ></FAQ>

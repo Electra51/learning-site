@@ -1,9 +1,9 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Category from '../Pages/Category/Category';
+// import Category from '../Pages/Category/Category';
 
 import Header from '../Shared/Header/Header';
-import LeftSide from '../Shared/LeftSide/LeftSide';
+// import LeftSide from '../Shared/LeftSide/LeftSide';
 
 const Main = () => {
     return (
