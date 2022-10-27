@@ -9,13 +9,7 @@ import NewData from './NewData/NewData';
 
 const Category = () => {
     const datas = useLoaderData();
-    // const [checkOut,setCheckOut] =useState([])
-    // console.log(datas)
-
-    // const handleButton = (datas) => {
-    //    console(datas)
-        
-    // }
+    
     return (
         <div>
 
@@ -25,7 +19,7 @@ const Category = () => {
                     
                     
                 ></NewData>
-                // handleButton={handleButton}
+              
                 
                 
                  

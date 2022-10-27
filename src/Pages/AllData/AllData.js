@@ -17,7 +17,7 @@ const AllData = ({data}) => {
    
 
     useEffect( () => {
-        fetch('http://localhost:5000/checkout/01')
+        fetch('https://learning-server-side-sooty.vercel.app/checkout/01')
             .then(res => res.json())
         .then(data=>setAllData(data))
     }, [])
