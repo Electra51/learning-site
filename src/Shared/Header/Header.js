@@ -1,11 +1,15 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../Assets/logo/logo.png'
+// import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import './Header.css'
 const Header = () => {
+// const{user}=useContext(AuthContext)
+
     return (
         <div >
-            <div className="navbar bg-base-100 antialiased text-gray-800 bg-white dark:bg-ray-800 dark:text-gray-100">
+            <div className="navbar bg-base-100 antialiased text-gray-800 bg-white dark:bg-gray-900 dark:text-gray-100">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -35,11 +39,11 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="flex space-x-2">
-                    <span className='text-sm text-gray-800 dark:text-gray-600'>Light</span>
+                    <span className='text-sm text-gray-800 dark:text-gray-500'>Light</span>
                     <div >
                         <input type="checkbox" name="" id="toggle" class="hidden" />
                         <label htmlFor="toggle">
-    <div class="w-9 h-5 flex items-center bg-gray-300 dark:bg-gray-700 rounded-full p-1">
+    <div class="w-9 h-5 flex items-center bg-gray-300 dark:bg-gray-400 rounded-full p-1">
       <div class="toggle-dot w-4 h-4 bg-white rounded-full shadow-md transform duration-300 ease-in-out">
 
       </div>
@@ -48,9 +52,12 @@ const Header = () => {
                             </label>
                     </div>
                     <span className='text-sm text-gray-400 dark:text-white'>Dark</span>
-           </div>
+                </div>
                 <div className="navbar-end">
-                    <Link className="btn btn-outline">Login</Link>
+                    <Link className="">{}</Link>
+                </div>
+                <div className="navbar-end">
+                    <Link to='login' className="btn btn-outline">Login</Link>
                 </div>
             </div>
         </div>
@@ -58,3 +65,5 @@ const Header = () => {
 };
 
 export default Header;
+
+// user?.displayName

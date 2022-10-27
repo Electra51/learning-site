@@ -15,6 +15,9 @@ import Category from "../../Pages/Category/Category";
 import CheckOut from "../../Pages/CheckOut/CheckOut";
 
 import AllData from "../../Pages/AllData/AllData";
+import Login from "../../Shared/Login/Login";
+import Signin from "../../Shared/Signin";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
 
@@ -45,10 +48,10 @@ export const routes = createBrowserRouter([
                
             },
             {
-                path: '/category/:id/checkout',
-                element:<CheckOut></CheckOut>,
+                path: 'category/:id/checkout',
+                element:<PrivateRoute></PrivateRoute>,
                 loader: async ({ params }) => {
-                    return fetch(`http://localhost:5000/category/${params.id}/checkout`)
+                    return fetch(`http://localhost:5000/category/${params.id}`)
                     console.log(params);
                 }
                
@@ -84,6 +87,17 @@ export const routes = createBrowserRouter([
                 element: <AllData></AllData>,
 
             },
+            {
+                path: 'login',
+                element: <Login></Login>,
+
+            },
+            {
+                path: '/signin',
+                element: <Signin></Signin>,
+
+            }
+
             // {
             //     path: '/courses/:id',
             //     element:<New></New>

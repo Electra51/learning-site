@@ -7,7 +7,7 @@ const ErrorPage = () => {
   return (
     
       
-      <div className='flex flex-col min-h-[500px] justify-center items-center'>
+      <div className='flex flex-col min-h-[500px] justify-center items-center  dark:bg-gray-900'>
       <h1 className='text-4xl'>Ops! An Error Ocurred!</h1>
       <br />
         {error && (
