@@ -1,3 +1,12 @@
 #toggle:checked ~ label div.toggle-dot{
     @apply translate-x-3;
 }
+.toggoleClass{
+    
+}
+/* for mobile view */
+@media only screen and (max-width: 688px) {
+    .toggoleClass{
+        display: none;
+    }
+}

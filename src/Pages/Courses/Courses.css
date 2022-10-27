@@ -16,3 +16,12 @@
         justify-items: center;
     }
     
+    @media only screen and (max-width: 688px) {
+        .AllCourses{
+            display: block;
+
+        }
+        .course-container{
+            display: block;
+        }
+    }

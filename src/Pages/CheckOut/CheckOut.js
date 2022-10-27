@@ -2,8 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import img from '../.././Assets/image/image1.jpg'
+import images1 from '../../Assets/image/image3.jpg'
+import image2 from '../../Assets/image/images1.jpg'
+import './CheckOut.css'
+import image3 from '../../Assets/image/image2.jpg'
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
+
 
 const CheckOut = ({ data }) => {
   
@@ -16,52 +20,76 @@ const CheckOut = ({ data }) => {
     return (
         <div>
 
-        <div className='flex gap-7 justify-center pt-8'>
+        <div className='carde-group flex gap-7 justify-center pt-8'>
         <div className="card w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+  <figure><img src={images1} alt="Shoes" /></figure>
   <div className="card-body">
-    <h2 className="card-title">
-      Shoes!
-      <div className="badge badge-secondary">NEW</div>
+    <h2 className="card-title text-gray-300">
+      UI/UX crushed course
+      
     </h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <p><div className="flex items-center mt-2.5 mb-5">
+            <svg aria-hidden="true" className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg aria-hidden="true" className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg aria-hidden="true" className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Third star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg aria-hidden="true" className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fourth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg aria-hidden="true" className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fifth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.00</span>
+                    </div></p>
     <div className="card-actions justify-end">
-      <div className="badge badge-outline">Fashion</div> 
-      <div className="badge badge-outline">Products</div>
+      <div className="btn btn-outline text-gray-500">Get This</div> 
+     
     </div>
           </div>
           
           </div>
           <div className="card w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+  <figure><img src={image3} alt="Shoes" /></figure>
   <div className="card-body">
-    <h2 className="card-title">
-      Shoes!
-      <div className="badge badge-secondary">NEW</div>
+    <h2 className="card-title text-gray-300">
+      UX Learning crushed course
+      
     </h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <p><div className="flex items-center mt-2.5 mb-5">
+            <svg aria-hidden="true" className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg aria-hidden="true" className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg aria-hidden="true" className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Third star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg aria-hidden="true" className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fourth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg aria-hidden="true" className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fifth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.00</span>
+                    </div></p>
     <div className="card-actions justify-end">
-      <div className="badge badge-outline">Fashion</div> 
-      <div className="badge badge-outline">Products</div>
+      <div className="btn btn-outline text-gray-500">Get This</div> 
+     
     </div>
           </div>
           
           </div>
           <div className="card w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+  <figure><img src={image2} alt="Shoes" /></figure>
   <div className="card-body">
-    <h2 className="card-title">
-      Shoes!
-      <div className="badge badge-secondary">NEW</div>
+    <h2 className="card-title text-gray-300">
+      UI/UX crushed course using good experience
+      
     </h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <p><div className="flex items-center mt-2.5 mb-5">
+            <svg aria-hidden="true" className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg aria-hidden="true" className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg aria-hidden="true" className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Third star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg aria-hidden="true" className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fourth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg aria-hidden="true" className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fifth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.00</span>
+                    </div></p>
     <div className="card-actions justify-end">
-      <div className="badge badge-outline">Fashion</div> 
-      <div className="badge badge-outline">Products</div>
+      <div className="btn btn-outline text-gray-500">Get This</div> 
+     
     </div>
           </div>
           
-</div>
+          </div>
+         
+         
+         
 </div>
 
 
@@ -76,16 +104,14 @@ const CheckOut = ({ data }) => {
   <div class="container mx-auto">
     <div class="-mx-4 flex flex-wrap">
       <div class="w-full px-4">
-        <div class="mx-auto mb-[60px] max-w-[510px] text-center lg:mb-20">
-          <span class="text-white mb-2 block text-lg font-semibold">
-            Our Pricing Table
-          </span>
+        <div class="mx-auto mb-[60px] max-w-[510px] text-center mt-10 lg:mb-20">
+          
           <h2
-            class="text-dark mb-4 text-3xl font-bold sm:text-4xl md:text-[40px]"
+            class="text-gray-400 mb-4 text-3xl font-bold sm:text-4xl md:text-[40px]"
           >
             Our Pricing Plan
           </h2>
-          <p class="text-body-color text-base">
+          <p class="text-body-color text-base text-gray-300">
             There are many variations of pricing available Please select  at least one
           </p>
         </div>
@@ -130,16 +156,16 @@ const CheckOut = ({ data }) => {
                                     </div>
                                     
          {/* The button to open modal */}
-<label htmlFor="my-modal" className="btn modal-button">open modal</label>
+<label htmlFor="my-modal" className="btn modal-button">Choose Basic</label>
 
 {/* Put this part before </body> tag */}
 <input type="checkbox" id="my-modal" className="modal-toggle" />
 <div className="modal">
   <div className="modal-box">
-    <h3 className="font-bold text-lg">Congratulations random Internet user!</h3>
-    <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+    <h3 className="font-bold text-lg">Congratulations</h3>
+    
     <div className="modal-action">
-      <label htmlFor="my-modal" className="btn">Yay!</label>
+      <label htmlFor="my-modal" className="btn">Done</label>
     </div>
   </div>
           
@@ -180,16 +206,16 @@ const CheckOut = ({ data }) => {
             </p>
           </div>
          {/* The button to open modal */}
-<label htmlFor="my-modal" className="btn modal-button">open modal</label>
+<label htmlFor="my-modal" className="btn modal-button">Choose Standard</label>
 
 {/* Put this part before </body> tag */}
 <input type="checkbox" id="my-modal" className="modal-toggle" />
 <div className="modal">
   <div className="modal-box">
-    <h3 className="font-bold text-lg">Congratulations random Internet user!</h3>
-    <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+    <h3 className="font-bold text-lg">Congratulations !</h3>
+    
     <div className="modal-action">
-      <label htmlFor="my-modal" className="btn">Yay!</label>
+      <label htmlFor="my-modal" className="btn">Done</label>
     </div>
   </div>
 </div>
@@ -235,16 +261,16 @@ const CheckOut = ({ data }) => {
           </div>
                                     
          {/* The button to open modal */}
-<label htmlFor="my-modal" className="btn modal-button">open modal</label>
+<label htmlFor="my-modal" className="btn modal-button">Choose Professional</label>
 
 {/* Put this part before </body> tag */}
 <input type="checkbox" id="my-modal" className="modal-toggle" />
 <div className="modal">
   <div className="modal-box">
-    <h3 className="font-bold text-lg">Congratulations random Internet user!</h3>
-    <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+    <h3 className="font-bold text-lg">Congratulations!</h3>
+    
     <div className="modal-action">
-      <label htmlFor="my-modal" className="btn">Yay!</label>
+      <label htmlFor="my-modal" className="btn">Done</label>
     </div>
   </div>
           

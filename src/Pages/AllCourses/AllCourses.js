@@ -5,11 +5,10 @@ import './AllCourses.css'
 
 const AllCourses = (props) => {
     const { name, img } = props.course;
-    // console.log(props)
-    // const { handleClick } = props;
+    
     
     return (
-        <div>
+        <div className='allcourse'>
             
 <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
     <Link to='' onClick={()=>props.handleClick(props.course)}>

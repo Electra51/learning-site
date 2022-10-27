@@ -4,9 +4,9 @@ const FAQ = () => {
     return (
         <div className='px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8'>
             <div className='max-w-xl sm:mx-auto lg:max-w-2xl'>
-                <div className='max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12'>
+                <div className='max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 text-gray-300'>
                 Frequently Asked Question
-                    <h2 className='max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-600 sm:text-4xl md:mx-auto'>
+                    <h2 className='max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-300 sm:text-4xl md:mx-auto'>
                         Some questions and answer here
                     </h2>
 
@@ -18,7 +18,7 @@ const FAQ = () => {
                         
                         <div className='space-y-8'>
                         <div>
-                            <p className='mb-4 text-xl font-medium'>
+                            <p className='mb-4 text-xl font-medium text-gray-300'>
                             What is Node? How does Node work?
                             </p>
                             <p className='text-gray-400'>
@@ -26,7 +26,7 @@ const FAQ = () => {
                             </p>
                             </div>
                             <div>
-                            <p className='mb-4 text-xl font-medium'>
+                            <p className='mb-4 text-xl font-medium text-gray-300'>
                             How does the private route work?
                             </p>
                             <p className='text-gray-400'>
@@ -40,7 +40,7 @@ const FAQ = () => {
                     </div>
                     <div className='space-y-8'>
                     <div>
-                            <p className='mb-4 text-xl font-medium'>
+                            <p className='mb-4 text-xl font-medium text-gray-300'>
                                 What is Cors?
                             </p>
                             <p className='text-gray-400'>
@@ -49,7 +49,7 @@ const FAQ = () => {
                             </p>
                         </div>
                     <div className='mt-5'>
-                            <p className='mb-4 text-xl font-medium '>
+                            <p className='mb-4 text-xl font-medium text-gray-300'>
                                 Why are you using firebase? What other options do you have to implement authentication?
                             </p>
                             <p className='text-gray-400'>

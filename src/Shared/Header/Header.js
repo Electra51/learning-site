@@ -7,7 +7,7 @@ import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 import './Header.css'
 const Header = () => {
-// const{user}=useContext(AuthContext)
+
 const { user, logOut } = useContext(AuthContext);
 
     const handleLogOut = () => {
@@ -31,7 +31,23 @@ const { user, logOut } = useContext(AuthContext);
 
                             <li><Link to='/FAQ'>FAQ</Link></li>
                             <li><Link to='/Blogs'>Blogs</Link></li>
+                            <div className=" flex space-x-2 ">
+                    <span className='text-sm text-gray-800 dark:text-gray-500'>Light</span>
+                    <div >
+                        <input type="checkbox" name="" id="toggle" class="hidden" />
+                        <label htmlFor="toggle">
+    <div class="w-9 h-5 flex items-center bg-gray-300 dark:bg-gray-400 rounded-full p-1">
+      <div class="toggle-dot w-4 h-4 bg-white rounded-full shadow-md transform duration-300 ease-in-out">
+
+      </div>
+
+                            </div>
+                            </label>
+                    </div>
+                    <span className='text-sm text-gray-400 dark:text-white'>Dark</span>
+                </div>
                         </ul>
+                        
                     </div>
                     <Link to='/' className="btn btn-ghost normal-case text-xl"> <img src={logo} alt="" height={40} width={27} /> SE Learning</Link>
                 </div>
@@ -46,7 +62,7 @@ const { user, logOut } = useContext(AuthContext);
                         <li><Link to='/Blogs'>Blogs</Link></li>
                     </ul>
                 </div>
-                <div className="flex space-x-2">
+                <div className="toggoleClass flex space-x-2 ">
                     <span className='text-sm text-gray-800 dark:text-gray-500'>Light</span>
                     <div >
                         <input type="checkbox" name="" id="toggle" class="hidden" />
