@@ -16,8 +16,10 @@ import CheckOut from "../../Pages/CheckOut/CheckOut";
 
 import AllData from "../../Pages/AllData/AllData";
 import Login from "../../Shared/Login/Login";
-import Signin from "../../Shared/Signin";
+import Signup from "../../Shared/Signup";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import TermsAndConditions from "../../Pages/TermsAndConditions/TermsAndConditions";
+import Profile from "../../Pages/Profile/Profile";
 
 
 
@@ -49,7 +51,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: 'category/:id/checkout',
-                element:<PrivateRoute></PrivateRoute>,
+                element:<PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
                 loader: async ({ params }) => {
                     return fetch(`http://localhost:5000/category/${params.id}`)
                     console.log(params);
@@ -93,9 +95,17 @@ export const routes = createBrowserRouter([
 
             },
             {
-                path: '/signin',
-                element: <Signin></Signin>,
+                path: '/signup',
+                element: <Signup></Signup>,
 
+            },
+            {
+                path: '/terms',
+                element: <TermsAndConditions></TermsAndConditions>
+            },
+            {
+                path: '/profile',
+                element: <PrivateRoute><Profile></Profile></PrivateRoute>
             }
 
             // {

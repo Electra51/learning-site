@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import img from '../.././Assets/image/image1.jpg'
-import { AuthContext } from '../../Contexts/AuthProvider/auth.context';
+import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 const CheckOut = ({ data }) => {
   

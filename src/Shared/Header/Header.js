@@ -1,12 +1,20 @@
 import React from 'react';
 import { useContext } from 'react';
+import { FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../../Assets/logo/logo.png'
-// import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
+import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
+
 import './Header.css'
 const Header = () => {
 // const{user}=useContext(AuthContext)
+const { user, logOut } = useContext(AuthContext);
 
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
     return (
         <div >
             <div className="navbar bg-base-100 antialiased text-gray-800 bg-white dark:bg-gray-900 dark:text-gray-100">
@@ -56,9 +64,33 @@ const Header = () => {
                 <div className="navbar-end">
                     <Link className="">{}</Link>
                 </div>
-                <div className="navbar-end">
-                    <Link to='login' className="btn btn-outline">Login</Link>
-                </div>
+                
+                
+                <>
+                            {
+                                user?.uid ?
+                                    <>
+                                        <span> {user?.displayName}</span>
+                                        <button className='btn btn-outline' variant="light" onClick={handleLogOut}> Log out</button>
+                                    </>
+                                    :
+                                    <>
+                                        <Link to='/login'>Login</Link>
+                                        <Link className='ml-3' to='/signup'> Signup</Link>
+                                    </>
+                            }
+
+
+                        </>
+                        <Link className='ml-2 pr-3' to="/profile">
+                            {user?.photoURL ?
+                                <img title={user.displayName} style={{ height: '35px' }}
+                                    roundedCircle
+                                    src={user?.photoURL}>
+                                </img>
+                                : <FaUser></FaUser>
+                            }
+                        </Link>
             </div>
         </div>
     );
